@@ -6,6 +6,9 @@
 <title>PeachBids — Georgia cleaning bids in your inbox</title>
 <meta name="description" content="PeachBids finds open public bids for janitorial, custodial and facility cleaning work across Georgia and sends you a short daily list.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="color-scheme" content="light">
 <link rel="canonical" href="https://peachbids.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://peachbids.com/">
@@ -14,66 +17,32 @@
 <meta property="og:image" content="https://peachbids.com/og.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f1a2b">
+<meta property="og:image:alt" content="PeachBids logo and tagline">
+<meta property="og:site_name" content="PeachBids">
+<meta name="theme-color" content="#14213A">
 <link rel="preload" href="/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
-<style>
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/Fraunces-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/Inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
-:root{--navy:#0f1a2b;--navy2:#17253b;--ink:#1c2533;--muted:#5b6575;--peach:#f2a07b;--peach-l:#fbd9c6;--bg:#faf8f5;--line:#e7e2db;--card:#fff}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:1rem}
-.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-a{color:#a8502a}
-.top{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.top::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 420px at 85% -10%,rgba(242,160,123,.22),transparent 60%),radial-gradient(700px 500px at -10% 110%,rgba(80,120,190,.18),transparent 60%);pointer-events:none}
-.top::after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(180deg,#000,transparent 85%);pointer-events:none}
-header{position:relative;z-index:1;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-.mark{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.35rem;letter-spacing:-.01em}
-.mark svg{flex:none}
-.hero{position:relative;z-index:1;padding:72px 0 88px;max-width:760px}
-h1{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:clamp(2.2rem,6.4vw,4rem);line-height:1.07;letter-spacing:-.02em;margin:0 0 22px}
-.sub{font-size:clamp(1.05rem,2.2vw,1.2rem);color:#c9d1dd;margin:0 0 34px;max-width:620px}
-.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(180deg,#f5ae8c,#ec8f66);color:#1a1210;font-weight:600;padding:15px 28px;border-radius:10px;text-decoration:none;font-size:1.02rem;box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 10px 30px -10px rgba(242,160,123,.6);transition:transform .15s,box-shadow .15s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 14px 34px -10px rgba(242,160,123,.75)}
-.btn:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.note{font-size:.9rem;color:#9aa6b8;margin:16px 0 0;max-width:560px}
-main section{padding:64px 0;border-bottom:1px solid var(--line)}
-h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.01em;margin:0 0 28px;color:var(--navy)}
-h2::before{content:"";display:block;width:36px;height:2px;background:var(--peach);margin-bottom:16px}
-.grid{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:1fr}
-.grid li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;box-shadow:0 1px 2px rgba(15,26,43,.04),0 12px 30px -18px rgba(15,26,43,.18)}
-.ic{width:42px;height:42px;border-radius:10px;background:var(--navy);display:grid;place-items:center;margin-bottom:14px}
-.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:14px}
-.steps li{counter-increment:s;display:flex;gap:18px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--line)}
-.steps li::before{content:counter(s,decimal-leading-zero);font-family:Fraunces,Georgia,serif;font-size:1.6rem;color:var(--peach);line-height:1;min-width:44px}
-.legal{display:grid;gap:40px}
-.legal h2{font-size:1.25rem;margin-bottom:12px}
-.small{font-size:.92rem;color:var(--muted);margin:0}
-footer{background:var(--navy);color:#9aa6b8;font-size:.86rem;padding:40px 0 48px}
-footer a{color:var(--peach-l)}
-footer .mark{font-size:1.1rem;margin-bottom:14px}
-@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}.legal{grid-template-columns:1fr 1fr}.legal section{border:0}.hero{padding:104px 0 120px}}
-@media(prefers-reduced-motion:reduce){.btn{transition:none}}
-</style>
+<link rel="preload" href="/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:'Fraunces';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/Fraunces-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}@font-face{font-family:'Inter';font-style:normal;font-weight:400 600;font-display:swap;src:url(/fonts/Inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}:root{--navy:#14213A;--navy2:#1B2B47;--ink:#1A1816;--muted:#58524A;--peach:#F08A5D;--peach-l:#FBD9C6;--acc:#B8452A;--bg:#F8F7F5;--line:#DCD8D1;--card:#fff;--leaf:#4E9A6B;--r:12px}*{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}body{margin:0;font:400 1rem/1.5 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}.wrap{max-width:1120px;margin:0 auto;padding:0 24px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}a{color:var(--acc);text-underline-offset:3px}:focus-visible{outline:3px solid var(--peach);outline-offset:3px;border-radius:4px}.top{background:var(--navy);color:#fff;position:relative;overflow:hidden}.top::before{content:"";position:absolute;inset:0;background:radial-gradient(720px 400px at 90% -10%,rgba(240,138,93,.22),transparent 65%);pointer-events:none}header{position:sticky;top:0;z-index:20;background:rgba(20,33,58,.96);color:#fff;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}.mark{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}.mark .logo{height:32px;width:auto}.herowrap{position:relative;z-index:1;display:grid;gap:48px;align-items:center}.hero{padding:80px 0 96px;max-width:720px;border-bottom:0!important}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.875rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--peach-l);margin:0 0 24px}.eyebrow::before{content:"";width:24px;height:1px;background:var(--peach)}h1{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:clamp(2.4375rem,6.4vw,4rem);line-height:1.08;letter-spacing:-.02em;margin:0 0 24px}.sub{font-size:clamp(1.0625rem,2.2vw,1.25rem);color:#D3D9E3;margin:0 0 32px;max-width:56ch}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;background:var(--peach);color:#1A1210;font-weight:600;font-size:1rem;padding:0 24px;border-radius:var(--r);text-decoration:none;transition:background .15s,transform .15s}.btn:hover{background:#F5A27D}.btn:active{transform:translateY(1px)}.btn.sm{min-height:44px;padding:0 16px;font-size:.9375rem}.note{font-size:.9375rem;color:#B9C3D2;margin:16px 0 0;max-width:56ch}.digest{background:#fff;color:var(--ink);border-radius:16px;padding:24px;box-shadow:0 32px 64px -32px rgba(0,0,0,.6);max-width:440px;justify-self:end;width:100%;margin-bottom:96px}.digest-h{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line);font-size:.875rem;color:var(--muted)}.digest-h b{color:var(--ink);display:block;font-size:1rem}.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:16px 0;border-bottom:1px solid #EFEDE9;font-size:.875rem;color:var(--muted)}.row:last-child{border:0;padding-bottom:0}.row i{font-style:normal;grid-column:1/-1;height:10px;border-radius:5px;background:#EFEDE9}.row i.w2{width:70%}.row i.w3{width:45%;background:#F6E3D9}main section{padding:96px 0;border-bottom:1px solid var(--line)}h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(1.5625rem,3vw,2.4375rem);letter-spacing:-.01em;margin:0 0 32px;color:var(--navy);line-height:1.15}h2::before{content:"";display:block;width:32px;height:2px;background:var(--peach);margin-bottom:16px}.grid{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:1fr}.grid li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 24px;font-size:1.0625rem;box-shadow:0 1px 2px rgba(20,33,58,.04),0 16px 32px -24px rgba(20,33,58,.2)}.ic{width:44px;height:44px;border-radius:12px;background:var(--navy);display:grid;place-items:center;margin-bottom:24px}.steps{list-style:none;counter-reset:s;margin:0;padding:0;display:grid;gap:0}.steps li{counter-increment:s;display:flex;gap:24px;align-items:baseline;padding:24px 0;border-top:1px solid var(--line);font-size:1.0625rem}.steps li::before{content:counter(s,decimal-leading-zero);font-family:Fraunces,Georgia,serif;font-size:1.5625rem;color:var(--acc);line-height:1;min-width:48px}.legal{display:grid;gap:48px}.legal h2{font-size:1.25rem;margin-bottom:16px}.small{font-size:1rem;color:var(--muted);margin:0;max-width:65ch}footer{background:var(--navy);color:#B9C3D2;font-size:.9375rem;padding:48px 0 64px;line-height:1.6}footer .logo{height:28px;width:auto;display:block;margin-bottom:24px}footer a{color:var(--peach-l)}.skip{position:absolute;left:12px;top:-60px;z-index:99;padding:12px 16px;background:#fff;color:#111;border-radius:8px;font-weight:600}.skip:focus{top:12px}a[href^="mailto:"]{display:inline-flex;align-items:center;min-height:44px}.copy{margin-left:8px;min-height:44px;padding:0 16px;border-radius:999px;border:1px solid currentColor;background:transparent;color:inherit;font:inherit;font-size:.875rem;cursor:pointer}.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(20,33,58,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(110%);transition:transform .25s}.dock.on{transform:none}.dock .btn{width:100%}@media(max-width:767px){body{padding-bottom:80px}header .btn{display:none}.digest{display:none}.hero{padding:56px 0 64px}main section{padding:64px 0}}@media(min-width:768px){.dock{display:none}.grid{grid-template-columns:1fr 1fr}.legal{grid-template-columns:1fr 1fr}.legal section{border:0}}@media(min-width:1024px){.herowrap{grid-template-columns:1.2fr .8fr}.hero{padding:104px 0 120px}.digest{margin:0}}@media(prefers-reduced-motion:reduce){*{transition:none!important}}.wm{display:inline-flex;align-items:center;gap:8px;font-family:Fraunces,Georgia,serif;font-weight:600;font-size:1.3125rem;color:#fff;letter-spacing:-.01em}.wm svg{flex:none}footer .wm{margin-bottom:24px}.nf .wm{font-size:1.5625rem}</style>
 </head>
-<body>
-<div class="top">
-<header><div class="wrap"><a class="mark" href="/"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="11" fill="#f2a07b"/><path d="M16 7c0 6 0 16 0 22" stroke="#0f1a2b" stroke-width="1.4" opacity=".35"/><path d="M16 7c3-4 8-4 10-3-2 4-6 5-10 3z" fill="#7fb38f"/></svg>PeachBids</a></div></header>
-<div class="wrap"><section class="hero">
+<body><a class="skip" href="#main">Skip to content</a>
+<header><div class="wrap"><a class="mark" href="/" aria-label="PeachBids home"><span class="wm"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="11" fill="#f2a07b"/><path d="M16 7c0 6 0 16 0 22" stroke="#0f1a2b" stroke-width="1.4" opacity=".35"/><path d="M16 7c3-4 8-4 10-3-2 4-6 5-10 3z" fill="#7fb38f"/></svg>PeachBids</span></a><a class="btn sm" href="https://docs.google.com/forms/d/e/1FAIpQLSd3b_Rs_mxL5xk_znDg9F38QmvV77zFxZ1Su7Fy-0Pa1BlLZQ/viewform" target="_blank" rel="noopener">Join the waitlist<span class="sr"> (opens in a new tab)</span></a></div></header>
+<main id="main"><div class="top">
+<div class="wrap herowrap"><section class="hero">
+<p class="eyebrow">Georgia · Janitorial &amp; custodial</p>
 <h1>Georgia cleaning bids. In your inbox. Every weekday.</h1>
 <p class="sub">PeachBids finds open public bids for janitorial, custodial and facility cleaning work across Georgia and sends you a short daily list. Join the waitlist to get early access.</p>
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd3b_Rs_mxL5xk_znDg9F38QmvV77zFxZ1Su7Fy-0Pa1BlLZQ/viewform" target="_blank" rel="noopener">Join the waitlist →<span class="sr"> (opens in a new tab)</span></a>
+<a class="btn" data-hero-cta href="https://docs.google.com/forms/d/e/1FAIpQLSd3b_Rs_mxL5xk_znDg9F38QmvV77zFxZ1Su7Fy-0Pa1BlLZQ/viewform" target="_blank" rel="noopener">Join the waitlist →<span class="sr"> (opens in a new tab)</span></a>
 <p class="note">Email only. No spam. We'll use your email for launch updates, a free weekly teaser, and once we launch, the weekday bid list. Unsubscribe any time.</p>
-</section></div>
+</section><div class="digest" aria-hidden="true"><div class="digest-h"><div><b>Weekday bid list</b>Example layout</div></div>
+<div class="row"><i></i><i class="w2"></i><i class="w3"></i></div><div class="row"><i></i><i class="w2"></i><i class="w3"></i></div><div class="row"><i></i><i class="w2"></i><i class="w3"></i></div></div></div>
 </div>
-<main class="wrap">
+<div class="wrap">
 <section aria-labelledby="get"><h2 id="get">What you get</h2>
 <ul class="grid">
-<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2a07b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>Cleaning-only bids: janitorial, custodial, floor care and facility cleaning. No noise.</li>
-<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2a07b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>Coverage from public state, county and city bid postings we monitor across Georgia.</li>
-<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2a07b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>Key facts at a glance: agency, scope, due date and a link to the original posting.</li>
-<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f2a07b" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>One short email each weekday morning. Unsubscribe any time.</li>
+<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F08A5D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18l-7 8v6l-4-2v-4z"/></svg></div>Cleaning-only bids: janitorial, custodial, floor care and facility cleaning. No noise.</li>
+<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F08A5D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>Coverage from public state, county and city bid postings we monitor across Georgia.</li>
+<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F08A5D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>Key facts at a glance: agency, scope, due date and a link to the original posting.</li>
+<li><div class="ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F08A5D" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>One short email each weekday morning. Unsubscribe any time.</li>
 </ul></section>
 <section aria-labelledby="how"><h2 id="how">How it works</h2>
 <ol class="steps">
@@ -87,7 +56,7 @@ footer .mark{font-size:1.1rem;margin-bottom:14px}
 <section aria-labelledby="indep"><h2 id="indep">Independence</h2>
 <p class="small">PeachBids is a private, independent service. It is not affiliated with, endorsed by, or operated by the State of Georgia, DOAS, Peach County, or any Georgia agency or government entity. We do our best to be accurate but can't guarantee completeness; missed or wrong listings aren't our responsibility. Always check the original posting. Always confirm bid details and deadlines at the original agency posting linked in each alert.</p></section>
 </div>
-</main>
-<footer><div class="wrap">© 2026 PeachBids · peachbids.com · Independent service, not a government site · Privacy: email used for launch updates, a free weekly teaser, and once we launch, the weekday bid list, and, if you opt in, founding-member pricing · Contact: <a href="mailto:hello@peachbids.com">hello@peachbids.com</a><br>Not affiliated with the State of Georgia, DOAS, GPR, Team Georgia Marketplace, Peach County or any government entity.</div></footer>
-</body>
+</div></main>
+<footer><div class="wrap"><span class="wm"><svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="18" r="11" fill="#f2a07b"/><path d="M16 7c0 6 0 16 0 22" stroke="#0f1a2b" stroke-width="1.4" opacity=".35"/><path d="M16 7c3-4 8-4 10-3-2 4-6 5-10 3z" fill="#7fb38f"/></svg>PeachBids</span>© 2026 PeachBids · peachbids.com · Independent service, not a government site · Privacy: email used for launch updates, a free weekly teaser, and once we launch, the weekday bid list, and, if you opt in, founding-member pricing · Contact: <a href="mailto:hello@peachbids.com">hello@peachbids.com</a><br>Not affiliated with the State of Georgia, DOAS, GPR, Team Georgia Marketplace, Peach County or any government entity.</div></footer>
+<script>document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){var b=document.createElement("button");b.type="button";b.className="copy";b.textContent="Copy";b.setAttribute("aria-label","Copy email address "+a.textContent);b.onclick=function(){navigator.clipboard.writeText(a.textContent).then(function(){b.textContent="Copied"; setTimeout(function(){b.textContent="Copy"},2000)})};a.after(b)})</script><div class="dock" aria-hidden="true"><a class="btn" tabindex="-1" href="https://docs.google.com/forms/d/e/1FAIpQLSd3b_Rs_mxL5xk_znDg9F38QmvV77zFxZ1Su7Fy-0Pa1BlLZQ/viewform" target="_blank" rel="noopener">Join the waitlist →<span class="sr"> (opens in a new tab)</span></a></div><script>(function(){var d=document.querySelector(".dock"),h=document.querySelector("[data-hero-cta]");if(!d||!h||!("IntersectionObserver" in window))return;new IntersectionObserver(function(e){var v=e[0].isIntersecting;d.classList.toggle("on",!v);d.setAttribute("aria-hidden",v?"true":"false");d.querySelector("a").tabIndex=v?-1:0}).observe(h)})()</script></body>
 </html>
