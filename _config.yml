@@ -1,0 +1,6 @@
+# GitHub Pages runs Jekyll on the main-branch root (no .nojekyll in the repo).
+# Keep the weekly as-of helper and its JSON off the public site.
+# These paths are not linked from any served page.
+exclude:
+  - scripts
+  - data
